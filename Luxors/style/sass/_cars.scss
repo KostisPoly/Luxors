@@ -1,0 +1,30 @@
+.cars {
+    grid-column: center-start / center-end;
+    margin: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 10%;
+}
+
+.car {
+    background-color: $color-grey-light-1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    &_img {
+        width: 100%;
+        min-height: 20rem;
+        transition: all .5s;
+        background-color: #000;
+        
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 1rem 1rem 8rem rgba(#000, 0.5);
+        }
+    }
+    &_model {
+        font-size: 1.6rem;
+        text-align: center;
+        color: $color-secondary;
+    }
+}

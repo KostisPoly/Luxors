@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Literata:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Luxors car rent theme</title>
+    <script type="text/javascript" src="./modal.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body class="container">
+    <div class="sidebar">
+        <i class="gg-format-justify"></i>
+    </div>
+    <div class="header">
+        <img src="img/logo.png" alt="Main Logo" class="header_logo">
+        <h3 class="h3">Rent a car today</h3>
+        <h1 class="h1">The Luxurious way</h1>
+        <h4 class="h4">Since 2001</h4>
+    </div>
+    <div class="searchform">
+        <button class="modal-rent-button">Rent A Car</button>
+        <button class="modal-chefeur-button">Chauffeured Ride</button>
+        <div class="modal-rent">
+            <div class="modal-rent-container">
+                <div class="modal-rent-left">
+                    <h1 class="modal-rent-title">Fill Order & Contact Info</h1>
+                    <div class="input-block">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" name="email" id="email1" placeholder="Email">
+                    </div>
+                    <div class="input-block">
+                        <label for="fullname" class="input-label">Full Name</label>
+                        <input type="fullname" name="fullname" id="fullname1" placeholder="Full Name">
+                    </div>
+                    <div class="input-block">
+                        <select name="car-select" id="car-select">
+                            <option value="0">Select car model</option>
+                            <option value="1">Model 1</option>
+                            <option value="2">Model 2</option>
+                            <option value="3">Model 3</option>
+                            <option value="4">Model 4</option>
+                            <option value="5">Model 5</option>
+                            <option value="6">Model 6</option>
+                        </select>
+                    </div>
+                    <div class="input-block">
+                        <input type="text" name="daterange" value=""/>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button class="input-button">Proceed to Payment</button>
+                </div>
+                <div class="modal-rent-right">
+                    <h1 class="modal-rent-title">Fill Payment Info</h1>
+                    <div class="input-block">
+                        <label for="cardNum" class="input-label">Card Number</label>
+                        <input type="number" name="cardNum" id="cardNum1" placeholder="Card Number">
+                    </div>
+                    <div class="input-block">
+                        <label for="CardName" class="input-label">Card Holder Full Name</label>
+                        <input type="CardName" name="cardName" id="cardName1" placeholder="Card Holder Full Name">
+                    </div>
+                    <p>Expiration Date:</p>
+                    <div class="input-block">
+                        <select name="cardExpireYear" id="cardExpireYear">
+                            <option value="">Year</option>
+                            <option value="1">2021</option>
+                            <option value="2">2022</option>
+                            <option value="3">2023</option>
+                            <option value="4">2024</option>
+                            <option value="5">2025</option>
+                            <option value="6">2026</option>
+                        </select>
+                    </div>
+                    <div class="input-block">
+                        <select name="cardExpireMonth" id="cardExpireMonth">
+                            <option value="">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="icon-button close-button">X</button>
+            </div>
+        </div>
+        <div class="modal-chefeur">
+            <div class="modal-chefeur-container">
+                <div class="modal-chefeur-left">
+                    <h1 class="modal-chefeur-title">Fill Pickup info</h1>
+                    <div class="input-block">
+                        <label for="email" class="input-label">Email</label>
+                        <input type="email" name="email" id="email2" placeholder="Email">
+                    </div>
+                    <div class="input-block">
+                        <label for="fullname" class="input-label">Full Name</label>
+                        <input type="fullname" name="fullname" id="fullname2" placeholder="Full Name">
+                    </div>
+                    <div class="input-block">
+                        <select name="destination-pickup" id="destination-pickup">
+                            <option value="0">Select Destination of Pick-up</option>
+                            <option value="1">Airport</option>
+                            <option value="2">Plaza</option>
+                            <option value="3">Port</option>
+                            <option value="4">Other Airport</option>
+                            <option value="5">Other Port</option>
+                            <option value="6">Other Place</option>
+                        </select>
+                    </div>
+                    <div class="input-block">
+                        <input type="text" name="daterange" value=""/>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button class="input-button">Proceed to Payment</button>
+                </div>
+                <div class="modal-chefeur-right">
+                    <h1 class="modal-chefeur-title">Fill Payment Info</h1>
+                    <div class="input-block">
+                        <label for="cardNum" class="input-label">Card Number</label>
+                        <input type="number" name="cardNum" id="cardNum2" placeholder="Card Number">
+                    </div>
+                    <div class="input-block">
+                        <label for="CardName" class="input-label">Card Holder Full Name</label>
+                        <input type="CardName" name="cardName" id="cardName2" placeholder="Card Holder Full Name">
+                    </div>
+                    <p>Expiration Date:</p>
+                    <div class="input-block">
+                        <select name="cardExpireYear" id="cardExpireYear2">
+                            <option value="">Year</option>
+                            <option value="1">2021</option>
+                            <option value="2">2022</option>
+                            <option value="3">2023</option>
+                            <option value="4">2024</option>
+                            <option value="5">2025</option>
+                            <option value="6">2026</option>
+                        </select>
+                    </div>
+                    <div class="input-block">
+                        <select name="cardExpireMonth" id="cardExpireMonth2">
+                            <option value="">Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="icon-button close-button">X</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="features">
+        <div class="feature">
+            <i class="gg-airplane"></i>
+            <h4 class="h4">lorem ipsum dolor whatava lorem ipsum dolor whatava</h4>
+            <p class="feature_text">lorem ipsum dolor whatava lorem ipsum dolor whatava
+                lorem ipsum dolor whatava lorem ipsum dolor 
+                whatavalorem ipsum dolor whatava lorem ipsum dolor whatavalorem ipsum dolor whatava 
+                lorem ipsum dolor whatavalorem ipsum dolor whatava lorem ipsum dolor whatavalorem 
+                ipsum dolor whatava lorem ipsum dolor whatava</p>
+        </div>
+        <div class="feature">
+            <i class="gg-bmw"></i>
+            <h4 class="h4">lorem ipsum dolor whatava lorem ipsum dolor whatava</h4>
+            <p class="feature_text">lorem ipsum dolor whatava lorem ipsum dolor whatava
+                lorem ipsum dolor whatava lorem ipsum dolor 
+                ipsum dolor whatava lorem ipsum dolor whatava</p>
+        </div>
+        <div class="feature">
+            <i class="gg-anchor"></i>
+            <h4 class="h4">lorem ipsum dolor whatava lorem ipsum dolor whatava</h4>
+            <p class="feature_text">lorem ipsum dolor whatava lorem ipsum dolor whatava
+                lorem ipsum dolor whatava lorem ipsum dolor 
+                whatava lorem ipsum dolor whatavalorem 
+                ipsum dolor whatava lorem ipsum dolor whatava</p>
+        </div>
+        <div class="feature">
+            <i class="gg-alarm"></i>
+            <h4 class="h4">lorem ipsum dolor whatava lorem ipsum dolor whatava</h4>
+            <p class="feature_text">lorem ipsum dolor whatava lorem ipsum dolor whatava
+                lorem ipsum dolor whatava lorem ipsum dolor 
+                whatavalorem ipsum dolor whatava lorem ipsum dolor whatavalorem ipsum dolor whatava 
+                lorem ipsum dolor whatavalorem ipsum dolor whatava lorem ipsum dolor whatavalorem 
+                ipsum dolor whatava lorem ipsum dolor whatava</p>
+        </div>
+    </div>
+    <div class="story_pictures">
+        <img src="img/driver-1.jpg" alt="" class="story_img_1">
+        <img src="img/driver-2_50.jpg" alt="" class="story_img_2">
+    </div>
+    <div class="story_content">
+        <h2 class="h2">1st Luxury Car Rental & Chauffeured Cars Company in Greece</h2>
+        <h3 class="h3">&ldquo;Car rental awards 2020&rdquo;</h3>
+        <p class="story_text">lorem ipsum dolor whatava lorem ipsum dolor 
+            whatavalorem ipsum dolor whatava lorem ipsum dolor whatavalorem ipsum dolor whatava 
+            lorem ipsum dolor whatavalorem ipsum dolor whatava lorem ipsum dolor whatavalorem 
+            ipsum dolor whatava lorem ipsum dolor</p>
+            <button class="btn">Learn More</button>
+    </div>
+    <div class="cars">
+        <div class="car">
+            <img src="img/car-1.jpg" alt="Car 1" class="car_img">
+            <h4 class="car_model">Car 1 Model</h4>
+            <button class="btn">More Info</button>
+        </div>
+        <div class="car">
+            <img src="img/car-2.jpg" alt="Car 2" class="car_img">
+            <h4 class="car_model">Car 2 Model</h4>
+            <button class="btn">More Info</button>
+        </div>
+        <div class="car">
+            <img src="img/car-3.jpg" alt="Car 3" class="car_img">
+            <h4 class="car_model">Car 3 Model</h4>
+            <button class="btn">More Info</button>
+        </div>        
+        <div class="car">
+            <img src="img/car-4.jpg" alt="Car 4" class="car_img">
+            <h4 class="car_model">Car 4 Model</h4>
+            <button class="btn">More Info</button>
+        </div>
+        <div class="car">
+            <img src="img/car-5.jpg" alt="Car 5" class="car_img">
+            <h4 class="car_model">Car 5 Model</h4>
+            <button class="btn">More Info</button>
+        </div>
+        <div class="car">
+            <img src="img/car-6.jpg" alt="Car 6" class="car_img">
+            <h4 class="car_model">Car 6 Model</h4>
+            <button class="btn">More Info</button>
+        </div>        
+    </div>
+    <div class="destinations">
+        <ul>
+            <li class="destination">
+                <img src="img/back-driver.jpg" alt="Image 1" class="destination_img">
+            </li>
+            <li class="destination">
+                <img src="img/back-driver1.jpg" alt="Image 2" class="destination_img">
+            </li>
+            <li class="destination">
+                <img src="img/driver-1.jpg" alt="Image 2" class="destination_img">
+            </li>
+            <li class="destination">
+                <img src="img/driver-2_50.jpg" alt="Image 2" class="destination_img">
+            </li>
+            <li class="destination">
+                <img src="img/back-driver1.jpg" alt="Image 2" class="destination_img">
+            </li>
+            <li class="destination">
+                <img src="img/header-back.jpg" alt="Image 2" class="destination_img">
+            </li>
+            <li class="destination">
+                <img src="img/back-driver1.jpg" alt="Image 2" class="destination_img">
+            </li>
+        </ul>
+        
+    </div>
+    <footer class="footer">
+        <ul class="footer_nav">
+            <li class="nav_item"><a href="#">Company</a></li>
+            <li class="nav_item"><a href="#">Fleet</a></li>
+            <li class="nav_item"><a href="#">Destinations</a></li>
+            <li class="nav_item"><a href="#">Contact Us</a></li>
+            <li class="nav_item"><a href="#">Faq</a></li>
+            <li class="nav_item"><a href="#">Terms & Privacy Policy</a></li>
+        </ul>
+        <ul class="footer_nav">
+            <li class="nav_item"><a href="#"><i class="gg-instagram"></i></a></li>
+            <li class="nav_item"><a href="#"><i class="gg-facebook"></i></a></li>
+            <li class="nav_item"><a href="#"><i class="gg-twitter"></i></a></li>
+        </ul>
+        <p class="copyright">
+            &copy; Copyrighted 2020, Stock Images created by 
+            <a href="https://www.pexels.com/@mikebirdy">Mike</a>, 
+            <a href="https://www.pexels.com/@mentatdgt-330508">Mentantdgt</a>,
+            <a href="https://www.pexels.com/@gustavo-fring">Gustavo Frig</a>, 
+            <a href="https://www.pexels.com/@photosbymishra">Sourav Mishra</a>,
+            and <a href="https://www.pexels.com/@pixabay">Pixabay</a> 
+        </p>
+    </footer>
+</body>
+</html>

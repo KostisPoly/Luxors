@@ -1,0 +1,31 @@
+.features {
+    //background-color: $color-grey-light-2;
+    grid-column: center-start / center-end;
+    margin: 15rem 0;
+    display: grid;
+    //grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 5%;
+    align-items: flex-start;
+}
+
+.feature {
+
+    display: grid;
+    grid-template-columns: 3.8rem 1fr;
+
+    & i {
+        --ggs: 3;
+        margin: auto;
+        color:  $color-primary;
+    }
+    & h4 {
+        line-height: 1;
+        padding: 5%;
+    }
+    &_text {
+        font-size: 1.6rem;
+        grid-column: 1 / -1;
+    }
+}
+
